@@ -17,21 +17,8 @@
 #================================================================================================ ##
       
 # Load the required packages if not installed
-    packages = c("shiny", "ggplot2", "dplyr", "grid", "plotly", "manhattanly", "forcats")
-    package.check <- lapply(packages, FUN = function(x) {
-     if (!require(x, character.only = TRUE)) {
-        install.packages(x, dependencies = TRUE)
-        library(x, character.only = TRUE)
-      }
-   })
+  pacman::p_load(c("shiny", "ggplot2", "dplyr", "grid", "plotly", "manhattanly", "forcats"), character.only = TRUE)
   # Load the required packages   
-  library(shiny)
-  library(ggplot2)
-  library(dplyr)
-  library(grid)
-  library(plotly)
-  library(manhattanly)
-  library(forcats)
   
 
 # Define UI for the application, for more information on it please see https://shiny.rstudio.com/gallery/
